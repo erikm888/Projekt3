@@ -5,7 +5,7 @@ The program needs two arguments:
 - name of the .cvs file to write into (create)
 
 ## Example for arguments
-scrapper.py https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103 example.cvs
+python scrapper.py "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103" example.csv
 
 ## Requirements
 requirements.txt contains all the necessary libraries needed to run the code
