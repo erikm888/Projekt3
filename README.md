@@ -1,13 +1,11 @@
 # Web Scrapper
-This scrapper is designed to create a cvs file containing the statistics of the czech voting results.
-The program needs two arguments:
-- link to an okres, from site https://www.volby.cz/
-- name of the .cvs file to write into (create)
+Tento program je navrhnutý tak, aby vytvořil soubor csv, který obsahuje štatistiky výsledků českého hlasování. Program potřebuje dva argumenty:
 
-## Example for arguments
+- link na územní celek, který chceme scrappovať. Link je zo stránky https://www.volby.cz/
+- jméno výstupního souboru s .csv príponou
+
+## Príklad argumentov
 python scrapper.py "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103" example.csv
 
-## Requirements
-requirements.txt contains all the necessary libraries needed to run the code
-they can be installed using pip
-pip install -r requirements.txt
+## Požadavky
+requirements.txt obsahuje všechny potrebné knihovny ke spuštění kódu. Dajú sa nainstalovať pomocí pip install -r requirements.txt
