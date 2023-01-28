@@ -84,7 +84,7 @@ def header(web):
         "td", class_="overflow_name", headers="t2sa1 t2sb2"))
     for i in range(len(names_of_parties)):
         names_of_parties[i] = names_of_parties[i].text
-    return names_of_parties
+    return header.extend(names_of_parties)
 
 
 if __name__ == "__main__":
@@ -94,8 +94,11 @@ if __name__ == "__main__":
         web = sys.argv[1]
         outputFile = sys.argv[2]
         
-    except:
+    except IndexError:
         print("Not enough system arguments")
+        exit()
+    except ValueError:
+        print("Invalid system arguments")
         exit()
     if not web.startswith("http"):
         print("Not an address")
