@@ -84,7 +84,7 @@ def header(web):
         "td", class_="overflow_name", headers="t2sa1 t2sb2"))
     for i in range(len(nazvy_stran)):
         nazvy_stran[i] = nazvy_stran[i].text
-    return nazvy_stran
+    return header.extend(nazvy_stran)
 
 
 if __name__ == "__main__":
@@ -94,7 +94,7 @@ if __name__ == "__main__":
         web = sys.argv[1]
         outputFile = sys.argv[2]
         
-    except:
+    except IndexError:
         print("Not enough system arguments")
         exit()
     if not web.startswith("http"):
